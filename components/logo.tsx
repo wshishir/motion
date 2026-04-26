@@ -10,8 +10,9 @@ const font = Poppins({
 
 const Logo = () => {
   return (
-    <div className="hidden md:flex items-center gap-x-2">
+    <div className="hidden md:flex items-center gap-x-1">
       <Image src="/logo.svg" height="40" width="40" alt="logo" />
+      <p className={cn("font-semibold text-2xl",font.className)}>otion</p>
     </div>
   );
 };
