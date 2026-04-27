@@ -18,10 +18,9 @@ const Navbar = () => {
       <Logo />
       <div
         className="md:ml-auto md:justify-end justify-between w-full flex
-      items-center gap-x-2"
+      items-center gap-x-4"
       >
-        <Button className="cursor-pointer active:scale-90">Login</Button>
-        <ModeToggle/>
+        <ModeToggle />
       </div>
     </div>
   );
