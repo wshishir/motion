@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import Logo from "./logo";
 import { Button } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
 
 const Navbar = () => {
   const scrolled = useScrollTop();
@@ -20,6 +21,7 @@ const Navbar = () => {
       items-center gap-x-2"
       >
         <Button className="cursor-pointer active:scale-90">Login</Button>
+        <ModeToggle/>
       </div>
     </div>
   );
