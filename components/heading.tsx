@@ -21,7 +21,7 @@ const Heading = () => {
       {isLoading && <p>Loading..</p>}
       {isAuthenticated && !isLoading && (
         <Button asChild className="group cursor-pointer text-xl p-5">
-          <Link href="/document">
+          <Link href="/documents">
             Get Started{" "}
             <ArrowRight className="transition-transform duration-200 group-hover:translate-x-0.5" />
           </Link>
@@ -30,7 +30,7 @@ const Heading = () => {
       {!isAuthenticated && !isLoading && (
         <SignInButton mode="modal">
           <Button className="group cursor-pointer text-xl p-5">
-            Get Motion free{" "}
+            Get Motion{" "}
             <ArrowRight className="transition-transform duration-200 group-hover:translate-x-0.5" />
           </Button>
         </SignInButton>
