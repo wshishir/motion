@@ -14,7 +14,7 @@ const Heading = () => {
         Motion is the connected workspace where <br /> better, faster work
         happens.
       </h3>
-      <Button className="group cursor-pointer text-xl p-4">
+      <Button className="group cursor-pointer text-xl p-5">
         Get Started <ArrowRight className="transition-transform duration-200 group-hover:translate-x-0.5"/>
       </Button>
     </div>
