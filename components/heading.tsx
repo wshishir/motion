@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { useConvexAuth } from "convex/react";
 import Link from "next/link";
 import { SignInButton } from "@clerk/nextjs";
+import { Spinner } from "./ui/spinner";
 
 const Heading = () => {
   const { isAuthenticated, isLoading } = useConvexAuth();
@@ -18,7 +19,11 @@ const Heading = () => {
         Motion is the connected workspace where <br /> better, faster work
         happens.
       </h3>
-      {isLoading && <p>Loading..</p>}
+      {isLoading && (
+        <div className="flex w-full items-center justify-center">
+          <Spinner />
+        </div>
+      )}
       {isAuthenticated && !isLoading && (
         <Button asChild className="group cursor-pointer text-xl p-5">
           <Link href="/documents">

@@ -7,6 +7,7 @@ import { useConvexAuth } from "convex/react";
 import { SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { Spinner } from "./ui/spinner";
 
 const Navbar = () => {
   const scrolled = useScrollTop();
@@ -23,7 +24,7 @@ const Navbar = () => {
         className="md:ml-auto md:justify-end justify-between w-full flex
       items-center gap-x-4"
       >
-        {isLoading && <p className="text-xs">Loading..</p>}
+        {isLoading && <Spinner/>}
         {!isAuthenticated && !isLoading && (
           <>
             <SignInButton mode="modal">
