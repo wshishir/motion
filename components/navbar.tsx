@@ -24,7 +24,7 @@ const Navbar = () => {
         className="md:ml-auto md:justify-end justify-between w-full flex
       items-center gap-x-4"
       >
-        {isLoading && <Spinner/>}
+        {isLoading && <Spinner />}
         {!isAuthenticated && !isLoading && (
           <>
             <SignInButton mode="modal">
@@ -35,9 +35,9 @@ const Navbar = () => {
         {isAuthenticated && !isLoading && (
           <>
             <Button asChild>
-              <Link href="/document">Enter Motion</Link>
+              <Link href="/documents">Enter Motion</Link>
             </Button>
-            <UserButton afterSwitchSessionUrl="/"/>
+            <UserButton afterSwitchSessionUrl="/" />
           </>
         )}
         <ModeToggle />
