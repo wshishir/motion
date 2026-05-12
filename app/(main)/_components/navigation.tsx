@@ -66,7 +66,7 @@ const Navigation = () => {
 
   const collapse = () => {
     if (sidebarRef.current && navbarRef.current) {
-      setIsCollapsed(true);
+      setIsCollapsed(true);``
       setIsResetting(true);
 
       sidebarRef.current.style.width = "0";
