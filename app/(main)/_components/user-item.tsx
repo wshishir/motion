@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
-import { useUser } from "@clerk/nextjs";
+import { SignOutButton, useUser } from "@clerk/nextjs";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
@@ -52,6 +53,13 @@ const UserItem = () => {
             </div>
           </div>
         </div>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem
+          asChild
+          className="w-full cursor-pointer text-muted-foreground"
+        >
+          <SignOutButton>Log out</SignOutButton>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
